@@ -1,1 +1,3 @@
 ﻿node_modules
+supabase/functions/handle-telegrambot-and-log/.env
+client/.env
