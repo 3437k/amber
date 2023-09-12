@@ -1,6 +1,6 @@
 {
   "imports": {
     "std/server": "https://deno.land/std@0.201.0/http/server.ts",
-    "postgres": "https://deno.land/x/postgres@v0.17.0/mod.ts"
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.7.1"
   }
 }

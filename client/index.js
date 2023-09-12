@@ -1,8 +1,8 @@
 require("dotenv").config();
 const os = require("os");
 
-const args = process.argv.slice(2);
-const argMessage = args[0].length > 0 ? args[0] : "";
+const args = process.argv.slice(2) 
+const argMessage = args.length > 0 ? args[0] : "";
 
 const sendMessage = async () => {
   // Public API Key
