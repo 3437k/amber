@@ -1,16 +1,17 @@
 require("dotenv").config();
 const os = require("os");
 
-const args = process.argv.slice(2) 
+const args = process.argv.slice(2);
 const argMessage = args.length > 0 ? args[0] : "";
 
 const sendMessage = async () => {
   // Public API Key
   const anonKey = process.env.ANNO_KEY;
+  const projectId = process.env.PROJECT_ID;
+  const functionName = process.env.FUNCTION_NAME;
 
   // URL
-  const basrUrl =
-    "https://nertqmyxhuifoogrxbdf.supabase.co/functions/v1/handle-telegrambot-and-log";
+  const basrUrl = `https://${projectId}.supabase.co/functions/v1/${functionName}`;
 
   // Message to target user
   const text =
@@ -32,7 +33,7 @@ const sendMessage = async () => {
     });
     const result = await response.json();
 
-    console.log(`메세지 전송 완료\n${result.text}`);
+    console.log(`ok! \n${result.text}`);
   } catch (error) {
     console.error(error);
   }
